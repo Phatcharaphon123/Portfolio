@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.sent-place-container {
+  margin: 10px 10%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Delivery Form */
+.delivery-form {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Form Sections */
+.form-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.right-box {
+  width: 45%;
+}
+
+.right-box1,
+.right-box2 {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Form Rows */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  margin-bottom: 10px; /* ช่องว่างระหว่าง input และองค์ประกอบด้านล่าง */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #ff7f50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
+}
+
+/* Summary & Payment Method */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  color: #ff7f50;
+}
+
+.payment-method label {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.payment-method input[type="radio"] {
+  margin-right: 10px;
+}
+
+#paybutton {
+  width: 30%;
+}
+
+.submit-button:hover {
+  background-color: #e05241;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .sent-place-container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column; /* ช่องกรอกข้อมูลเรียงในแนวตั้ง */
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  input[type="text"],
+  input[type="email"] {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ระบบบริหารจัดการสนามฟุตบอล - GreenZone</title>
+    <link rel="stylesheet" href="employee.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <body>
+    <!-- ส่วนหน้าแรก -->
+    <section class="containerMain">
+      <nav>
+        <div class="logo">🌿GreenZone</div>
+        <div class="nav-links" >
+            <ul>
+            </ul>
+            <div class="imageIcon"><a href="employeelogin.html"><img src="/image/imageIcon.png" alt=""></a></div>
+        </div>
+      </nav>
+      <div class="boxMain">
+        <div class="boxNav">
+          <ul>
+            <li><a href="empoloyeeMain.html"><i class="fa fa-home"></i> หน้าแรก</a></li>
+            <li><a href="employeeNews.html"><i class="fa fa-newspaper-o"></i> ข่าวสารบริษัท</a></li>
+            <li><a href="employeeProfile.html"><i class="fa fa-user"></i> ข้อมูลส่วนตัว</a></li>
+            <li><a href="employeeSchedule.html"><i class="fa fa-calendar"></i> ตารางการทำงาน</a></li>
+            <li><a href="employeeCustomer.html"><i class="fa fa-users"></i> ลูกค้า</a></li>
+            <li><a href="employeeITsupport.html" class="active"><i class="fa fa-life-ring"></i> ติดต่อ IT Support</a></li>
+            <li><a href="employeeExit.html"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+        </ul>
+        
+        </div>
+        <section class="ITsupport">
+          <h2 class="itsupport-title">📞 ติดต่อ IT Support</h2>
+          
+          <div class="itsupport-container">
+              <div class="itsupport-info">
+                  <h3>ข้อมูลติดต่อ</h3>
+                  <p><i class="fa fa-user"></i> ชื่อ: ทีม IT GreenZone</p>
+                  <p><i class="fa fa-envelope"></i> อีเมล: support@greenzone.com</p>
+                  <p><i class="fa fa-phone"></i> โทรศัพท์: 02-123-4567</p>
+                  <p><i class="fa fa-clock-o"></i> เวลาทำการ: 09:00 - 18:00 (จันทร์ - ศุกร์)</p>
+              </div>
+      
+              <div class="itsupport-form">
+                  <h3>ส่งคำร้องขอความช่วยเหลือ</h3>
+                  <form>
+                      <label for="name">ชื่อของคุณ</label>
+                      <input type="text" id="name" placeholder="กรอกชื่อของคุณ" required>
+      
+                      <label for="email">อีเมล</label>
+                      <input type="email" id="email" placeholder="example@email.com" required>
+      
+                      <label for="message">รายละเอียดปัญหา</label>
+                      <textarea id="message" placeholder="อธิบายปัญหาที่พบ" required></textarea>
+      
+                      <button type="submit" class="btn-submit">ส่งคำขอ</button>
+                  </form>
+              </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  </body>
+</html>

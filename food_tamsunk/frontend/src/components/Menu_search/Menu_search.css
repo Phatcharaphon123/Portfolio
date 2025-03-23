@@ -1,0 +1,181 @@
+.menu-search-container {
+  height: auto;
+  margin: 10px 12%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.word-search {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px;
+}
+
+.menu-search {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 91vh;
+  padding: 7px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 91vh; /* ตัวอย่างกำหนดความสูงเพื่อให้ scrollbar ทำงาน */
+}
+/* ตกแต่ง Scrollbar ของ .menu-search */
+.menu-search::-webkit-scrollbar {
+  width: 15px;
+}
+
+.menu-search::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.menu-search::-webkit-scrollbar-thumb {
+  background: #ff6347;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+.menu-search::-webkit-scrollbar-thumb:hover {
+  background: #ff4500;
+}
+
+/* Reuse card styles */
+.card-items {
+  margin-right: 11px;
+  width: 23%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-items:hover {
+  transform: scale(1.02);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.card-detail {
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.card-food-detail {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 5px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* หน้าจอใหญ่ */
+.menu-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* ปรับสำหรับหน้าจอใหญ่กลาง (1200px ขึ้นไป) */
+@media (max-width: 1200px) {
+  .card-items {
+    width: 30%; /* ลดความกว้างของการ์ด */
+  }
+}
+
+/* ปรับสำหรับหน้าจอกลาง (992px ขึ้นไป) */
+@media (max-width: 992px) {
+  .card-items {
+    width: 45%; /* แสดง 2 การ์ดต่อแถว */
+  }
+  .menu-search-container {
+    margin: 10px 8%; /* ลด margin ด้านข้าง */
+  }
+}
+
+/* ปรับสำหรับหน้าจอแท็บเล็ต (768px ขึ้นไป) */
+@media (max-width: 768px) {
+  .card-items {
+    width: 100%; /* แสดงการ์ดเต็มแถว */
+  }
+  .card-img {
+    height: 150px; /* ลดขนาดรูป */
+  }
+  .card-name {
+    font-size: 14px;
+  }
+  .card-price {
+    font-size: 16px;
+    padding: 5px; /* ลด padding */
+  }
+  .menu-search-container {
+    margin: 10px 5%; /* ลด margin */
+  }
+}
+
+/* ปรับสำหรับหน้าจอมือถือ (576px ขึ้นไป) */
+@media (max-width: 576px) {
+  .word-search h2 {
+    font-size: 16px; /* ลดขนาดข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+  }
+  .card-img {
+    height: 120px; /* ลดขนาดรูป */
+  }
+  .card-detail {
+    font-size: 12px;
+  }
+  .cart,
+  .buy {
+    font-size: 12px; /* ลดขนาดปุ่ม */
+    height: 35px;
+    padding: 5px;
+  }
+}

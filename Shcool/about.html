@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <!-- section การแบ่งส่วนของเนื้อหาเป็นกลุ่มๆ  -->
+<section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="image/logo.png"></a>
+            <div class="nav-links" id="navLink">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About us</h1>
+</section>
+
+<!-- ------- about us content ------- -->
+ <section class="about-us">
+    <div class="row">
+        <div class="about-col"> 
+            <h1>We are the world's largest university</h1>
+            <p> Lorem isum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque aliquet turpis nu;;a, eleifend faucibus est 
+                sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.
+                Donec sit amet nisl non justomalesuada fermentum. Donec eget felis dolor.
+                Suspendisse condimentum vestibulum ex ac cursus. Nam pharetra
+                viverra efficitur. Sed pellentesque luctus arcu, quis finibus nibh luctus mattis.</p>
+                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+        </div>
+        <div class="about-col"> 
+            <img src="/image/about.jpg">
+        </div>
+    </div>
+ </section>
+
+
+
+
+<!-- ------ Footer ------- -->
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem isum dolor sit amet, consectetur adipiscing 
+        elit.Pellentesque aliquet turpis nu;;a, eleifend faucibus est<br> 
+        sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus
+        Donec sit.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by Easy Tutorials</p>
+</section>
+
+<!-- ------JavaScript for Toggle Menu------ -->
+<script>
+    // สำหรับการเข้าถึง Element Id. ในการใช้ภาษา JavaScript ร่วมกับ HTML นั้น จำเป็นต้องใช้คำสั่ง document.getElementById(id)
+    var navLink = document.getElementById("navLink");
+
+    function showMenu(){
+        navLink.style.right="0"// id.ไฟล์css.ตำแหน่ง กดแล้วทำให้กลับมาอยู่ที่เดิม
+    }
+    function hideMenu(){
+        navLink.style.right="-200px" // id.ไฟล์css.ตำแหน่ง กดอีกทีแล้วทำให้ -200px
+    }
+
+</script>
+
+</body>
+</html>

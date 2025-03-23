@@ -1,0 +1,820 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+/* คอนเทนเนอร์หลัก */
+.containerMain {
+  min-height: 100vh;
+  width: 100%;
+  background: url("image/soccer-field.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+}
+
+/* โลโก้ */
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: #429c0f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+}
+
+/* แถบเมนู */
+nav {
+  display: flex;
+  padding: 1% 2%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid rgb(205, 205, 205);
+  background-color: rgb(255, 255, 255);
+  color: white;
+}
+
+/* ไอคอนรูปภาพ */
+.imageIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgb(205, 205, 205);
+}
+
+.imageIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ส่วนหลัก */
+.boxMain {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* เมนูด้านซ้าย */
+.boxNav {
+  width: 20%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  border-right: 5px solid rgb(205, 205, 205);
+}
+
+.boxNav ul {
+  list-style: none;
+}
+
+.boxNav ul li {
+  padding: 10px 0;
+  border-bottom: 2px solid rgb(205, 205, 205);
+}
+
+.boxNav ul li a {
+  text-decoration: none;
+  color: #595959;
+  font-weight: bold;
+  transition: 0.3s;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.boxNav ul li a:hover {
+  background: #319513;
+}
+
+.boxNav ul li a:hover {
+  color: white;
+}
+
+/* กำหนดให้เมนูค้างเมื่อ active */
+.boxNav ul li a.active, 
+.boxNav ul li a:focus {
+  background: #1a5f06; 
+  color: white;
+}
+
+/* ----------------------------------------------------Main-------------------------------------------------------- */
+.boxContent1 {
+  width: 80%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+}
+
+.boxMain-top {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #319513, #2600ff);
+  color: white;
+  border-radius: 8px;
+}
+
+.boxMain-top h1 {
+  font-size: 36px;
+}
+
+.boxMain-top p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.boxMain-bottom {
+  display: flex;
+  height: 65vh;
+  margin-top: 20px;
+  gap: 1%;
+}
+
+.boxMain-bottom-left,
+.boxMain-bottom-right {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.boxMain-bottom-left img,
+.boxMain-bottom-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.boxMain-bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+
+.boxMain-bottom-right-top,
+.boxMain-bottom-right-bottom {
+  flex: 1;
+}
+
+.footerMain{
+  width: 100%;
+  font-size: 36px;
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to right, #319513, #2600ff);
+  border-radius: 0px 0px 10px 10px;
+}
+/* --------------------------------------------------ข้อมูลส่วนตัว--------------------------------------------------- */
+/* ตั้งค่าพื้นฐาน */
+.profile-container {
+    background: white;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* ส่วนหัวโปรไฟล์ */
+.profile-header {
+    text-align: center;
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    font-size: 19px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* โครงสร้างโปรไฟล์แบบแนวนอน */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* รูปพนักงาน */
+.profile-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #28a745;
+    object-fit: cover;
+}
+
+/* ข้อมูลพนักงาน */
+.profile-right {
+    flex: 2;
+}
+
+.profile-right h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* ส่วนแสดงรายละเอียด */
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.detail-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+/* --------------------------------------------------ข่าวสารบริษัท--------------------------------------------------- */
+/* ข่าวสารบริษัท */
+.newContents {
+    width: 80%;
+    height: 100vh;
+    padding: 20px;
+    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    overflow-y: auto; /* เปิด Scrollbar แนวตั้ง */
+    scrollbar-width: thin; /* ปรับขนาด Scrollbar */
+    scrollbar-color: #28a745 #f4f4f4; /* กำหนดสีของ Scrollbar */
+}
+
+.news-title {
+    font-size: 28px;
+    color: white;
+    background: #28a745;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ปรับ Scrollbar สำหรับเบราว์เซอร์ที่รองรับ */
+.newContents::-webkit-scrollbar {
+    width: 8px;
+}
+
+.newContents::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+.newContents::-webkit-scrollbar-thumb {
+    background: #28a745;
+    border-radius: 4px;
+}
+
+/* ปรับแต่งรายการข่าวให้ดูดี */
+.news-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #28a745;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* กล่องข่าวแต่ละรายการ */
+/* วันที่ของข่าว */
+.news-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+/* แท็กบอกประเภทข่าว */
+.news-tag {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* สีของแท็กข่าว */
+.important {
+    background-color: #ff4d4d; /* สีแดง */
+}
+
+.update {
+    background-color: #007bff; /* สีน้ำเงิน */
+}
+
+.general {
+    background-color: #ffa500; /* สีส้ม */
+}
+
+/* หัวข้อข่าว */
+.news-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+/* เนื้อหาข่าว */
+.news-item p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+/* ปุ่ม "อ่านเพิ่มเติม" */
+.news-button {
+    color: #007bff;
+    font-size: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* เอฟเฟกต์เมื่อโฮเวอร์ปุ่ม */
+.news-button:hover {
+    text-decoration: underline;
+    color: #3328a7;
+}
+/* --------------------------------------------------ตารางการทำงาน--------------------------------------------------- */
+/* ตั้งค่าพื้นฐานของตาราง */
+.Schedule {
+    width: 80%;
+    padding: 20px;
+    height: auto;
+    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+}
+
+/* หัวข้อของตาราง */
+.schedule-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    background: #28a745;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ตั้งค่าพื้นฐานของตาราง */
+.schedule-container {
+    max-height: 600px; /* กำหนดความสูงของตาราง */
+    overflow-y: auto; /* เปิด Scrollbar เฉพาะแนวตั้ง */
+}
+
+/* กำหนดสไตล์ตาราง */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    min-width: 800px; /* ป้องกันการบีบของตาราง */
+}
+
+/* ตั้งค่าพื้นฐานของตาราง */
+.schedule-container {
+    max-height: 800px; /* กำหนดความสูงของตาราง */
+    overflow-y: auto; /* เปิด Scrollbar แนวตั้ง */
+    position: relative;
+    
+}
+
+/* กำหนดสไตล์ตาราง */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    min-width: 800px; /* ป้องกันการบีบของตาราง */
+}
+
+/* หัวตาราง ค้างไว้ด้านบน */
+.schedule-table thead {
+    position: sticky;
+    top: 0;
+    background: #28a745;
+    color: white;
+    z-index: 10;
+}
+
+/* แถวของหัวตาราง */
+.schedule-table thead tr {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* กำหนดสไตล์ของหัวข้อ */
+.schedule-table th {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* สลับสีแถว */
+.schedule-table tbody tr:nth-child(odd) {
+    background: #f2f2f2;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #ffffff;
+}
+
+/* เพิ่มเงาเมื่อโฮเวอร์ */
+.schedule-table tbody tr:hover {
+    background: rgba(40, 167, 69, 0.2);
+    cursor: pointer;
+}
+
+/* ปรับแต่งคอลัมน์ */
+.schedule-table td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.schedule-table td:first-child {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Scrollbar แนวตั้ง */
+.schedule-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.schedule-container::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.schedule-container::-webkit-scrollbar-thumb {
+    background: #28a745;
+    border-radius: 10px;
+}
+
+/* --------------------------------------------------ITsupport--------------------------------------------------- */
+
+/* ตั้งค่า Section IT Support */
+.ITsupport {
+    width: 80%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* หัวข้อหลัก */
+.itsupport-title {
+    font-size: 28px;
+    color: white;
+    background: #28a745;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* กล่องจัดเรียงแนวนอน */
+.itsupport-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* กล่องข้อมูลติดต่อ */
+.itsupport-info {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.itsupport-info h3 {
+    color: #28a745;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.itsupport-info p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* กล่องฟอร์ม */
+.itsupport-form {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.itsupport-form h3 {
+    color: #28a745;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* ฟอร์มและปุ่ม */
+.itsupport-form label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.itsupport-form input, 
+.itsupport-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.itsupport-form textarea {
+    height: 100px;
+}
+
+.btn-submit {
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #1e6b0a;
+}
+
+/* --------------------------------------------------ออกจากระบบ--------------------------------------------------- */
+/* ตั้งค่ากลางหน้าจอ */
+.Exit {
+    padding: 70px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* กล่องยืนยันออกจากระบบ */
+.exit-container {
+    text-align: center;
+    width: 60%;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* หัวข้อ */
+.exit-container h2 {
+    font-size: 22px;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+/* ข้อความ */
+.exit-container p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ปุ่ม */
+.exit-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ปุ่มทั่วไป */
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 45%;
+    text-align: center;
+}
+
+/* ปุ่มออกจากระบบ */
+.logout-btn {
+    background: #d9534f;
+    color: white;
+    font-weight: bold;
+}
+
+/* ปุ่มยกเลิก */
+.cancel-btn {
+    background: #5bc0de;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+    background: #c9302c;
+}
+
+.cancel-btn:hover {
+    background: #31b0d5;
+}
+
+/* --------------------------------------------------Customer--------------------------------------------------- */
+/* ส่วนรายการคำร้องขอ */
+.CustomerRequest {
+    width: 80%;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* หัวข้อ */
+.CustomerRequest h2 {
+    font-size: 28px;
+    color: white;
+    background: #28a745;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Scrollbar แนวนอนและแนวตั้ง */
+.request-table-container {
+    overflow-y: auto; 
+    overflow-x: auto;
+    max-height: 700px; /* จำกัดความสูง */
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* ตาราง */
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 1000px; /* ป้องกันการยุบตัว */
+}
+
+/* หัวตารางคงที่ */
+.request-table #thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #77B254;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ปรับแต่งหัวตาราง */
+.request-table th {
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+    background: #77B254;
+    color: white;
+    z-index: 11;
+}
+
+/* ข้อมูลในตาราง */
+.request-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* แถวสลับสี */
+.request-table tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* รูปภาพ */
+.request-img {
+    width: 80px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+/* ทำให้ Checkbox มีสีเขียวเมื่อถูกเลือก */
+.approve-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid #77B254;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* เปลี่ยนเป็นสีเขียวเมื่อเลือก */
+.approve-checkbox:checked {
+    background-color: #77B254;
+    border-color: #77B254;
+}
+
+/* ใส่เครื่องหมายถูกสีขาวเมื่อ Checkbox ถูกเลือก */
+.approve-checkbox:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.read{
+    cursor: pointer;
+    color: #1e00ff;
+}
+
+.read:hover{
+    text-decoration: underline;
+}
+
+/* ทำให้สามารถคลิกที่รูปได้ */
+.sampleImage {
+    cursor: pointer;
+    color: #1e00ff;
+}
+
+.sampleImage:hover {
+    text-decoration: underline;
+}
+
+/* Scrollbar Styling */
+.request-table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.request-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.request-table-container::-webkit-scrollbar-thumb {
+    background: #77B254;
+    border-radius: 10px;
+}
+
+.request-table-container::-webkit-scrollbar-thumb:hover {
+    background: #5a9e3c;
+}

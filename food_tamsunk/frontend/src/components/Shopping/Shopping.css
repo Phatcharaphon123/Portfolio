@@ -1,0 +1,123 @@
+
+
+/* Container styles */
+.incart {
+  margin: 20px 12%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.incart-items {
+  margin-bottom: 20px;
+}
+
+.incart-items-item img {
+  width: 120px; /* กำหนดความกว้างแน่นอน */
+  height: 80px; /* กำหนดความสูงแน่นอน */
+  object-fit: cover; /* ครอบรูปภาพให้พอดีกรอบ */
+  border-radius: 5px;
+  margin: auto; /* จัดกึ่งกลางรูปภาพ */
+}
+
+.incart-items-title {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  font-weight: bold;
+  text-align: center;
+}
+
+.incart-items-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.incart-items-remove-icon {
+  cursor: pointer;
+  color: red;
+  text-align: center;
+}
+
+.incart-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.incart-total,
+.incart-promocode {
+  width: 48%;
+}
+
+.incart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.incart-total button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.incart-promocode-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.incart-promocode-input input[type="text_promocode"] {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.incart-promocode-input button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  width: 20%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.incart-promocode-input button:hover {
+  background-color: #218838;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity-controls button:hover {
+  background-color: #e05241;
+}
+
+.quantity-controls span {
+  font-size: 16px;
+  font-weight: bold;
+}

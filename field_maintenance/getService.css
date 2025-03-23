@@ -1,0 +1,414 @@
+/* -----------------------------------------------------home nav------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit",serif;
+}
+
+.home_nav {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.0)), url(image/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    padding: 1% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #77B254;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.sign-in-button button {
+    background-color: #319513;
+    /* สีพื้นหลัง */
+    color: white;
+    /* สีตัวอักษร */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    /* ทำให้ขอบมน */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-in-button button:hover {
+    background-color: #49ba2f;
+    /* สีเมื่อ hover */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+/* ----------------------------------------------------Footer--------------------------------------------------------- */
+
+.footer {
+    border-top: 10px solid gray;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.3)), url(image/footer.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer p {
+    font-size: 11px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+.icons .fa {
+    color: #ffffff;
+    /* สีเขียวอ่อนให้เข้ากับธีมสนามหญ้า */
+    margin: 0 15px;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.icons .fa:hover {
+    color: #fff;
+    /* เปลี่ยนเป็นสีขาวเมื่อโฮเวอร์ */
+}
+
+.fa-heart-o {
+    color: #ff4b5c;
+    /* สีแดงให้ดูโดดเด่น */
+}
+
+/* -----------------------------------------------------Services-------------------------------------------------------- */
+
+.services_nav {
+    min-height: 50vh;
+    border-bottom: 10px solid gray;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.0)), url(image/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.services-text {
+    text-align: center;
+    padding: 80px 0;
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.services {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.service-content {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.row {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-col {
+    flex-basis: 31%;
+    background: #f9fff9;
+    border-radius: 5px;
+    margin-bottom: 3%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+    border: 2px solid #06610c;
+}
+
+.service-content p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.service-col p {
+    font-size: 12px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: auto;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #06610c;
+}
+
+.service-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    background: #77B254;
+    color: #fff;
+}
+
+.service-col:hover h3,
+.service-col:hover p {
+    color: #fff;
+}
+
+/* -----------------------------------------------------getService----------------------------------------------------------- */
+.service1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    background-color: #e6f7e6;
+    align-items: flex-start;
+}
+
+/* กล่องรูปภาพหลัก */
+.box1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* รูปภาพด้านบน */
+.image-top img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* กล่องรูปภาพด้านล่าง */
+.box2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    gap: 10px; /* เพิ่มระยะห่างเล็กน้อย */
+}
+
+/* รูปภาพด้านล่าง */
+.image-buttom {
+    flex: 1; /* ทำให้รูปภาพยืดขยายเท่ากัน */
+}
+
+.image-buttom img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* กล่องเนื้อหา */
+.box-right1 {
+    flex: 1;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #cdcdcd;
+    border-top: 5px solid #57cc13;
+    border-bottom: 5px solid #57cc13;
+}
+
+/* ======= หัวข้อและเนื้อหา ======= */
+.service-title1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #004d00;
+    margin-bottom: 10px;
+}
+
+.service-subtitle1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #008000;
+}
+
+.service-list1,
+.service-steps1 ul {
+    padding-left: 20px;
+}
+
+/* ======= ราคาและปุ่ม ======= */
+.price-container {
+    border-top: 3px solid rgba(181, 181, 181, 0.95); ;
+    display: flex;
+    justify-content:space-between; /* จัดไปชิดขวา */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* จัดตำแหน่งราคาชิดขวา */
+.price-box1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #008000;
+}
+
+/* ปุ่มขอใบเสนอราคาให้อยู่ขวาตรงกับราคา */
+.btn-box1 {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+}
+
+/* ปรับปุ่มสอบถามข้อมูลเพิ่มเติมให้ชิดขวา */
+.more-info1 {
+    margin-top: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+/* ปุ่มต่างๆ */
+.custom-btn1 {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.primary-btn1 {
+    background-color: #008000;
+    color: #ffffff;
+    border: 2px solid #006400;
+}
+
+.primary-btn1:hover {
+    background-color: #004d00;
+    border-color: #003300;
+}
+
+.secondary-btn1 {
+    background-color: #ffffff;
+    color: #008000;
+    border: 2px solid #008000;
+}
+
+.secondary-btn1:hover {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+/* ลิงก์ข้อมูลเพิ่มเติม */
+.info-link1 {
+    color: #004d00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-link1:hover {
+    text-decoration: underline;
+    color: #002600;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+

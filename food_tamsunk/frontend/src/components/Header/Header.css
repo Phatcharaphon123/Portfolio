@@ -1,0 +1,33 @@
+.header-container {
+    height: 40vw; /* ความสูงเป็นสัดส่วนกับความกว้างของหน้าจอ */
+    margin: 11px 12%;
+    justify-content: center;
+    background-image: url('/header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* ป้องกันการซ้ำของภาพ */
+    border-radius: 20px;
+  }
+
+  
+  /* Responsive Design */
+  /* สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+  @media screen and (max-width: 768px) {
+    .header-container {
+      height: 50vh; 
+      margin: 10px 5%; 
+      background-size: cover;
+      border-radius: 15px; 
+    }
+  }
+  
+  /* สำหรับหน้าจอขนาดกลาง (แท็บเล็ต) */
+  @media screen and (max-width: 1024px) {
+    .header-container {
+      height: 45vh; 
+      margin: 10px 8%; 
+      background-size: cover; 
+      border-radius: 18px; 
+    }
+  }
+  

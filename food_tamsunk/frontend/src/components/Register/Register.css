@@ -1,0 +1,87 @@
+/* Default Styles (Desktop) */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(/login_header.png) no-repeat center center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .login-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .styled-button {
+    display: flex;
+    align-items: center;
+    background-color: #FF5B00;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .styled-button:hover {
+    background-color: #FEBA4F;
+  }
+  
+  .login {
+    flex: 1;
+    max-width: 400px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 40px auto;
+    padding: 30px;
+  }
+  
+  .login-header img {
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #FF5B5B;
+  }
+  
+  .terms-container {
+    margin-top: 10px;
+  }
+  
+  .footer-bottom {
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    background-color: #1e1e2f;
+    font-size: 12px;
+  }
+  
+  /* Responsive Styles */
+  

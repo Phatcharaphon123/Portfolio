@@ -1,0 +1,122 @@
+.footer {
+  background-color: #2c2c54;
+  color: #fff;
+  font-family: 'K2D', sans-serif;
+}
+
+.footer-top {
+  padding: 5px 20px;
+  background-color: #e97451;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* ให้จัดวางใหม่เมื่อพื้นที่ไม่พอ */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons .icon {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-icons .icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  flex-wrap: wrap; /* ปรับให้อยู่ในแถวใหม่ถ้าพื้นที่ไม่พอ */
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px; /* กำหนดความกว้างขั้นต่ำ */
+}
+
+.footer-column img {
+  width: 65%;
+  height: auto; /* ปรับให้คงอัตราส่วน */
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column ul {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-column ul {
+  padding: 0;
+  list-style-type: none; /* ลบ bullet ของรายการ */
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1e2f;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+/* สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* จัดเรียงแบบแนวตั้ง */
+    text-align: center;
+    gap: 10px; /* เพิ่มช่องว่างระหว่างองค์ประกอบ */
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column; /* จัดเรียงคอลัมน์ในแนวตั้ง */
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .footer-column {
+    margin: 15px 0; /* เพิ่มช่องว่างระหว่างคอลัมน์ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  }
+
+  .footer-column img {
+    width: 80%; /* ขยายภาพให้ใหญ่ขึ้นสำหรับมือถือ */
+  }
+}
+
+/* สำหรับหน้าจอขนาดกลาง (แท็บเล็ต) */
+@media screen and (max-width: 1024px) {
+  .footer-content {
+    padding: 20px 20px; /* ลด Padding */
+  }
+
+  .footer-column {
+    flex: 1 1 45%; /* แสดง 2 คอลัมน์ต่อแถว */
+  }
+
+  .footer-column img {
+    width: 75%;
+  }
+}
