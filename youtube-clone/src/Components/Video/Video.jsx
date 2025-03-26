@@ -48,7 +48,7 @@ const PlayVideo = ({ videoId }) => {
                 <p>{apiData ? value_converter(apiData.statistics.viewCount) : 1525} วิว  &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "2 วันที่ผ่านมา"}</p>
                 <div>
                     <span><img src={like} alt="" />{apiData ? value_converter(apiData.statistics.likeCount) : 125}</span>
-                    <span><img src={dislike} alt="" />2</span>
+                    <span><img src={dislike} alt="" /></span>
                     <span><img src={share} alt="" />แชร์</span>
                     <span><img src={save} alt="" />บันทึก</span>
                 </div>
