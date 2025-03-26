@@ -3,8 +3,6 @@ import './Sidebar.css'
 import home from '../../assets/home.png'
 import game_icon from '../../assets/game_icon.png'
 import automobiles from '../../assets/automobiles.png'
-import explore from '../../assets/explore.png'
-import subscriprion from '../../assets/subscriprion.png'
 import sports from '../../assets/sports.png'
 import entertainment from '../../assets/entertainment.png'
 import tech from '../../assets/tech.png'
@@ -23,6 +21,7 @@ import Lofi_Girl from '../../assets/Lofi_Girl.png'
 const Sidebar = ({sidebar,category,setCategory}) => {
   return (
     <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
+      {/* แสดงหมวดหมู่หลักของวิดีโอ */}
       <div className="shortcut-links">
             <div onClick={()=>{setCategory(0)}} className={`side-link ${category===0?"active":""}`}><img src={home} alt="" /><p>หน้าแรก</p></div>
             <div onClick={()=>{setCategory(20)}} className={`side-link ${category===20?"active":""}`}><img src={game_icon} alt="" /><p>เกม</p></div>
@@ -35,6 +34,7 @@ const Sidebar = ({sidebar,category,setCategory}) => {
             <div onClick={()=>{setCategory(25)}} className={`side-link ${category===25?"active":""}`}><img src={news} alt="" /><p>ข่าว</p></div>
             <hr/>
         </div>
+         {/* แสดงรายการช่องที่ผู้ใช้ติดตาม */}
         <div className="subscribed-list">
             <h3>การติดตาม</h3>
             <div className={`side-link`}><img src={Maser} alt="" /><p>Maser</p></div>

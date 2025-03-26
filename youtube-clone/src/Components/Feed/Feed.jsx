@@ -6,32 +6,46 @@ import moment from 'moment'
 
 const Feed = ({category}) => {
 
-    const [data,setData] = useState([]);
+    // สร้าง state สำหรับเก็บข้อมูลวิดีโอ
+    const [data, setData] = useState([]);
 
-    const fetchData = async ()=>{
+    // ฟังก์ชันสำหรับดึงข้อมูลวิดีโอจาก YouTube API
+    const fetchData = async () => {
+        // URL สำหรับดึงข้อมูลวิดีโอที่ได้รับความนิยมในหมวดหมู่ที่เลือก
         const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
-        await fetch(videoList_url).then((response)=>response.json()).then((data)=>setData(data.items))
+        
+        // ดึงข้อมูลจาก API
+        await fetch(videoList_url)
+            .then((response) => response.json())  // แปลงข้อมูลที่ได้เป็น JSON
+            .then((data) => setData(data.items));  // เก็บข้อมูลใน state `data`
     }
 
-    useEffect(()=>{
+    // เรียกใช้ fetchData เมื่อหมวดหมู่ (category) เปลี่ยนแปลง
+    useEffect(() => {
         fetchData();
-    },[category])
+    }, [category]);
 
   return (
    <div className='feed'>
-        {data.map((item,index)=>{
-            return <Link key={index} to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
-                        <img src={item.snippet.thumbnails.medium.url} alt="" />
-                        <h2>{item.snippet.title}</h2>
-                        <h3>{item.snippet.channelTitle}</h3>
-                         <p>{value_converter(item.statistics.viewCount)} วิว &bull; 
-                         {" "+moment(item.snippet.publishedAt).fromNow()}</p>
-                     </Link>
-        })} 
+        {/* แสดงข้อมูลวิดีโอทั้งหมดใน state `data` */}
+        {data.map((item, index) => {
+            return (
+                // ลิงค์ที่นำไปยังหน้ารายละเอียดของวิดีโอ
+                <Link key={index} to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
+                    {/* ภาพตัวอย่างของวิดีโอ */}
+                    <img src={item.snippet.thumbnails.medium.url} alt="" />
+                    {/* ชื่อเรื่องของวิดีโอ */}
+                    <h2>{item.snippet.title}</h2>
+                    {/* ชื่อช่องที่เผยแพร่วิดีโอ */}
+                    <h3>{item.snippet.channelTitle}</h3>
+                    {/* จำนวนการดู และเวลาที่เผยแพร่ */}
+                    <p>{value_converter(item.statistics.viewCount)} ครั้ง &bull; 
+                    {" " + moment(item.snippet.publishedAt).fromNow()}</p>
+                </Link>
+            );
+        })}
     </div>
-
- 
   )
 }
 
-export default Feed
+export default Feed;
