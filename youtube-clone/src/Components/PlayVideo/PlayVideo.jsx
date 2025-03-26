@@ -26,10 +26,9 @@ const PlayVideo = ({ videoId }) => {
         const channelLogo_url = `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${apiData.snippet.channelId}&key=${API_KEY}`;
         await fetch(channelLogo_url).then(res => res.json()).then(data => setChannelData(data.items[0]));
 
-        // Fetching Comment Data
-        const videoComment_url = `https://www.googleapis.com/youtube/v3/commentThreads?textFormat=plainText&part=snippet&maxResults=50&key=${API_KEY}&videoId=${videoId}`;
-        await fetch(videoComment_url).then(res => res.json()).then(data => setCommentData(data.items));
-
+        // Fetching Comment Data (limit to 20 comments)
+        const videoComment_url = `https://www.googleapis.com/youtube/v3/commentThreads?textFormat=plainText&part=snippet&maxResults=20&key=${API_KEY}&videoId=${videoId}`;
+        await fetch(videoComment_url).then(res => res.json()).then(data => setCommentData(data.items.slice(0, 20))); 
     }
 
     useEffect(() => {
@@ -44,36 +43,29 @@ const PlayVideo = ({ videoId }) => {
     return (
         <div className="play-video">
             <iframe src={`https://www.youtube.com/embed/${videoId}?&autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            {/* Best YouTube Channel To Learn Web Development  */}
-            <h3>{apiData ? apiData.snippet.title : "Title Here"}</h3>
+            <h3>{apiData ? apiData.snippet.title : "หัวข้อที่นี่"}</h3>
             <div className="play-video-info">
-                <p>{apiData ? value_converter(apiData.statistics.viewCount) : 1525} Views  &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "2 days ago"}</p>
+                <p>{apiData ? value_converter(apiData.statistics.viewCount) : 1525} วิว  &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "2 วันที่ผ่านมา"}</p>
                 <div>
                     <span><img src={like} alt="" />{apiData ? value_converter(apiData.statistics.likeCount) : 125}</span>
                     <span><img src={dislike} alt="" />2</span>
-                    <span><img src={share} alt="" />Share</span>
-                    <span><img src={save} alt="" />Save</span>
+                    <span><img src={share} alt="" />แชร์</span>
+                    <span><img src={save} alt="" />บันทึก</span>
                 </div>
             </div>
             <hr />
             <div className="publisher">
                 <img src={channelData ? value_converter(channelData.snippet.thumbnails.default.url) : ""} alt="" />
                 <div>
-                    {/* GreatStack */}
                     <p>{apiData ? apiData.snippet.channelTitle : ""}</p>
-                    {/* 500K Subscribers */}
-                    <span>{channelData ? value_converter(channelData.statistics.subscriberCount) : "1M"} Subscribers</span>
+                    <span>{channelData ? value_converter(channelData.statistics.subscriberCount) : "1M"} ผู้ติดตาม</span>
                 </div>
-                <button type="button">Subscribe</button>
+                <button type="button">ติดตาม</button>
             </div>
             <div className="vid-description">
-                {/* Channel that makes learning Easy
-                Subscribe GreatStack to Watch More Tutorials on web development */}
-                <p>{apiData ? apiData.snippet.description.slice(0, 250) : "Description Here"}</p>
+                <p>{apiData ? apiData.snippet.description.slice(0, 250) : "คำอธิบายที่นี่"}</p>
                 <hr />
-                {/* 130 Comments */}
-                <h4>{apiData ? value_converter(apiData.statistics.commentCount) : 130} Comments</h4>
-
+                <h4>{apiData ? value_converter(apiData.statistics.commentCount) : 130} คอมเมนต์</h4>
                 {commentData.map((item, index) => {
                     return (
                         <div key={index} className="comment">
@@ -90,21 +82,7 @@ const PlayVideo = ({ videoId }) => {
                         </div>
                     )
                 })}
-                {/* <div className="comment">
-                    <img src={user_profile} alt="" />
-                    <div>
-                        <h3>Jack Nicholson <span>2 days ago</span></h3>
-                        <p>A global computer network providing a variety of information and communication facilities, consisting
-                            of interconnected networks using standardized communication protocols.</p>
-                        <div className="comment-action">
-                            <img src={like} alt="" />
-                            <span>244</span>
-                            <img src={dislike} alt="" />
-                        </div>
-                    </div>
-                </div> */}
             </div>
-
         </div>
     )
 }
